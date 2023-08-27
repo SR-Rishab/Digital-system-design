@@ -1,0 +1,50 @@
+module tb();
+wire [7:0]s;
+wire co;
+reg [7:0]a,b;
+reg cin;
+ripple8 r1(s,co,a,b,cin);
+initial
+begin
+a =12 ;
+b = 12;
+cin = 0;
+#10;
+a = 15;
+b = 5;
+cin = 1;
+#10;
+a = 13;
+b = 16;
+cin = 1;
+#10;
+a = 16;
+b = 2;
+cin = 0;
+#10;
+a = 1;
+b = 1;
+cin = 0;
+#10;
+a = 5;
+b = 5;
+cin = 0;
+#10;
+a = 40;
+b = 40;
+cin = 0;
+#10;
+a = 4;
+b = 6;
+cin = 1;
+#10;
+a = 7;
+b = 10;
+cin = 1;
+#10;
+a = 12;
+b = 14;
+cin = 0;
+#10;
+end
+endmodule
